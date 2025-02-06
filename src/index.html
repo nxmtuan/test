@@ -77,11 +77,36 @@
               <div
                 class="bg-[#38b083] w-[30px] h-[30px] pt-[5px] pl-[5px] rounded-full"
               ></div>
-              <a
-                href="#"
+              <button
+                onclick="openPopup('AYaHuZ4BB6Y')"
                 class="text-[#717275] text-sm group-hover:text-[#38b083] transition-all duration-200"
-                >1:49 Minutes</a
               >
+                1:49 Minutes
+              </button>
+              <div
+                id="overlay"
+                class="hidden fixed top-0 left-0 w-full h-full bg-black/70 z-[999]"
+                onclick="closePopup()"
+              ></div>
+              <div
+                id="popup"
+                class="hidden fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-transparent z-[1000]"
+              >
+                <button
+                  onclick="closePopup()"
+                  class="fixed top-0 right-0 text-white font-bold"
+                >
+                  X
+                </button>
+                <br />
+                <iframe
+                  id="videoFrame"
+                  class="w-[840px] h-[526px]"
+                  src=""
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
@@ -89,50 +114,172 @@
     </section>
 
     <section class="py-[120px] flex justify-center items-center">
-      <div class="container grid grid-cols-2 justify-center items-center">
-        <h2 class="w-full px-3 text-[42px] mb-12 font-semibold">
-          Digital Happiness
-        </h2>
-        <div class="w-full px-3 flex">
-          <div class="w-3/4 border-b flex justify-center items-start ml-auto">
-            <div
-              class="text-black select-none cursor-pointer font-semibold py-2 px-4 mx-[23.45px] border-b border-[#38b083]"
-            >
-              Introduction
-            </div>
-            <div
-              class="text-[#dee2e6] select-none cursor-pointer font-semibold py-2 px-4 mx-[23.45px]"
-            >
-              Profile
-            </div>
-            <div
-              class="text-[#dee2e6] select-none cursor-pointer font-semibold py-2 px-4 mx-[23.45px]"
-            >
-              FAQs
+      <div class="container flex flex-col justify-center items-center">
+        <div class="flex w-full">
+          <h2 class="w-1/2 px-3 text-[42px] mb-12 font-semibold">
+            Digital Happiness
+          </h2>
+          <div class="w-1/2 px-3 flex">
+            <!-- Tab header -->
+            <div class="w-3/4 h-fit border-b ml-auto">
+              <div class="w-full flex justify-center items-start ml-auto">
+                <div
+                  onclick="openTab(event, 'tab1')"
+                  class="tab-button text-[#dee2e6] select-none cursor-pointer font-semibold py-2 px-4 mx-[23.45px] border-b border-transparent transition-all duration-300"
+                >
+                  Introduction
+                </div>
+                <div
+                  onclick="openTab(event, 'tab2')"
+                  class="tab-button text-[#dee2e6] select-none cursor-pointer font-semibold py-2 px-4 mx-[23.45px] border-b border-transparent transition-all duration-300"
+                >
+                  Profile
+                </div>
+                <div
+                  onclick="openTab(event, 'tab3')"
+                  class="tab-button text-[#dee2e6] select-none cursor-pointer font-semibold py-2 px-4 mx-[23.45px] border-b border-transparent transition-all duration-300"
+                >
+                  FAQs
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <img
-          src="https://www.tooplate.com/templates/2128_tween_agency/images/webpage-browser-digital-icon-symbols-concept.jpg"
-          alt=""
-          class="w-[656px] h-[456.21px] px-3"
-        />
-        <div class="px-3 my-[53.8px] mx-[55px]">
-          <h3 class="text-4xl mb-4 px-3 font-semibold">Brand Creation</h3>
-          <p class="px-3 break-words text-lg mb-4 text-[#717275]">
-            We want you to be happy with our Tween Agency services. Our digital
-            agency is ready to serve you to grow your business in a healthy way.
-          </p>
-          <p class="px-3 break-words text-lg mb-4 text-[#717275]">
-            This is Bootstrap 5 HTML template for your website provided by
-            Tooplate. You can download, edit and use this layout for your
-            company website.
-          </p>
-          <p class="px-3 break-words text-lg mb-4 text-[#717275]">
-            Image credits go to FreePik and Unsplash for images used in this
-            template. We really appreciate these stock image websites for
-            providing free photos to everyone.
-          </p>
+
+        <!-- tab content -->
+        <div
+          id="tab1"
+          class="tab-content flex w-full transition-all duration-300"
+        >
+          <img
+            src="https://www.tooplate.com/templates/2128_tween_agency/images/webpage-browser-digital-icon-symbols-concept.jpg"
+            alt=""
+            class="w-[656px] h-[456.21px] px-3"
+          />
+          <div class="w-1/2 px-3 my-[53.8px] mx-[55px]">
+            <h3 class="text-4xl mb-4 px-3 font-semibold">Brand Creation</h3>
+            <p class="px-3 break-words text-lg mb-4 text-[#717275]">
+              We want you to be happy with our Tween Agency services. Our
+              digital agency is ready to serve you to grow your business in a
+              healthy way.
+            </p>
+            <p class="px-3 break-words text-lg mb-4 text-[#717275]">
+              This is Bootstrap 5 HTML template for your website provided by
+              Tooplate. You can download, edit and use this layout for your
+              company website.
+            </p>
+            <p class="px-3 break-words text-lg mb-4 text-[#717275]">
+              Image credits go to FreePik and Unsplash for images used in this
+              template. We really appreciate these stock image websites for
+              providing free photos to everyone.
+            </p>
+          </div>
+        </div>
+
+        <div
+          id="tab2"
+          class="tab-content hidden w-full transition-all duration-300"
+        >
+          <div
+            class="w-1/2 px-3 my-[53.8px] mx-[55px] flex flex-col justify-center"
+          >
+            <h3 class="text-4xl mb-4 px-3 font-semibold">Marie Smarty, CEO</h3>
+            <p class="px-3 break-words text-lg mb-4 text-[#717275]">
+              Our priority is your happiness working together with us. We
+              guarantee you the best service quality from us. Feel free to talk
+              to us via email, twitter, or linkedin.
+            </p>
+            <p
+              class="px-3 break-words text-lg my-4 text-[#717275] font-semibold"
+            >
+              Where to find?
+            </p>
+          </div>
+          <img
+            src="https://www.tooplate.com/templates/2128_tween_agency/images/dream-about-working-corporation-became-true.jpg"
+            alt=""
+            class="w-[656px] h-[456.21px] px-3"
+          />
+        </div>
+
+        <div
+          id="tab3"
+          class="tab-content hidden w-full transition-all duration-300"
+        >
+          <img
+            src="https://www.tooplate.com/templates/2128_tween_agency/images/php-programming-html-coding-cyberspace-concept.jpg"
+            alt=""
+            class="w-[656px] h-[456.21px] px-3"
+          />
+          <div
+            class="w-1/2 px-3 my-[53.8px] mx-[55px] flex flex-col justify-center"
+          >
+            <h3 class="text-4xl mb-4 px-3 font-semibold">
+              Frequenlty Asked Questions
+            </h3>
+
+            <div class="w-full overflow-hidden">
+              <button
+                class="w-full text-start px-3 break-words text-base mb-4 pt-6 pb-[15px] text-[#717275] border-b"
+                onclick="toggleContent(1)"
+              >
+                What is Tween Agency?
+              </button>
+              <div
+                id="content1"
+                class="px-3 break-words text-lg mb-4 pt-6 pb-[15px] text-[#717275] border-b hidden"
+              >
+                <p>
+                  Tween Agency is free HTML template powered by Bootstrap 5 CSS
+                  framework. This means you can use all standard CSS classes
+                  provided by Bootstrap version 5 to customize your CSS layout.
+                </p>
+                <p>
+                  You are allowed to use it for your clients. You are not
+                  allowed to redistribute this template ZIP file on any other
+                  template website. Please contact Tooplate for more info.
+                </p>
+              </div>
+            </div>
+
+            <div class="w-full overflow-hidden">
+              <button
+                class="w-full text-start px-3 break-words text-base mb-4 pt-6 pb-[15px] text-[#717275] border-b"
+                onclick="toggleContent(2)"
+              >
+                What are available services?
+              </button>
+              <div
+                id="content2"
+                class="px-3 break-words text-lg mb-4 pt-6 pb-[15px] text-[#717275] border-b hidden"
+              >
+                <p>
+                  We provide full digital marketing services for all various
+                  aspects of your company's web presence and social medias. You
+                  have 100% peace of mind for your company by working with us.
+                </p>
+              </div>
+            </div>
+
+            <div class="w-full overflow-hidden">
+              <button
+                class="w-full text-start px-3 break-words text-base mb-4 pt-6 pb-[15px] text-[#717275] border-b"
+                onclick="toggleContent(3)"
+              >
+                How many successful projects?
+              </button>
+              <div
+                id="content3"
+                class="px-3 break-words text-lg mb-4 pt-6 pb-[15px] text-[#717275] border-b hidden"
+              >
+                <p>
+                  We have over 280+ successful projects for different companies.
+                  There are great experiences of working together with different
+                  clients all over the world.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -542,6 +689,7 @@
     </footer>
 
     <script>
+      //Navbar
       window.addEventListener("scroll", function () {
         const navbar = document.getElementById("navbar");
         const navlinks = document.getElementById("a");
@@ -566,6 +714,71 @@
           navdivs.classList.add("text-white");
         }
       });
+
+      //video on hero section
+      function openPopup(videoId) {
+        const popup = document.getElementById("popup");
+        const overlay = document.getElementById("overlay");
+        const videoFrame = document.getElementById("videoFrame");
+
+        videoFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
+        popup.classList.remove("hidden");
+        popup.classList.add("block");
+
+        overlay.classList.remove("hidden");
+        overlay.classList.add("block");
+      }
+
+      function closePopup() {
+        const popup = document.getElementById("popup");
+        const overlay = document.getElementById("overlay");
+        const videoFrame = document.getElementById("videoFrame");
+
+        videoFrame.src = "";
+
+        popup.classList.remove("block");
+        popup.classList.add("hidden");
+
+        overlay.classList.remove("block");
+        overlay.classList.add("hidden");
+      }
+
+      //Digital Happiness
+      function openTab(event, tabId) {
+        document.querySelectorAll(".tab-content").forEach((tab) => {
+          tab.classList.add("hidden");
+          tab.classList.remove("flex");
+        });
+
+        document.querySelectorAll(".tab-button").forEach((btn) => {
+          btn.classList.remove("text-black", "border-[#38b083]");
+          btn.classList.add("text-[#dee2e6]", "border-transparent");
+        });
+
+        document.getElementById(tabId).classList.remove("hidden");
+        document.getElementById(tabId).classList.add("flex");
+
+        event.currentTarget.classList.remove(
+          "text-[#dee2e6]",
+          "border-transparent"
+        );
+        event.currentTarget.classList.add("text-black", "border-[#38b083]");
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelector(".tab-button").click();
+      });
+
+      function toggleContent(id) {
+        const contents = document.querySelectorAll('[id^="content"]');
+        contents.forEach((content) => {
+          if (content.id !== `content${id}`) {
+            content.classList.add("hidden");
+          }
+        });
+        document.getElementById(`content${id}`).classList.toggle("hidden");
+      }
     </script>
   </body>
 </html>
