@@ -14,38 +14,42 @@
     >
       <div class="container flex justify-center items-center">
         <a
+          id="a"
           href="index.html"
           class="text-white text-[40px] py-[5px] mr-4 no-underline whitespace-nowrap"
           >Tween
         </a>
-        <div class="flex justify-center items-center ml-10 text-lg">
+        <div
+          id="div"
+          class="flex justify-center items-center text-white ml-10 text-lg"
+        >
           <div
-            class="py-[15px] px-[25px] text-white hover:text-[#38b083] transition-all duration-200 cursor-pointer"
+            class="py-[15px] px-[25px] hover:text-[#38b083] transition-all duration-200 cursor-pointer"
           >
             Home
           </div>
           <div
-            class="py-[15px] px-[25px] text-white hover:text-[#38b083] transition-all duration-200 cursor-pointer"
+            class="py-[15px] px-[25px] hover:text-[#38b083] transition-all duration-200 cursor-pointer"
           >
             About
           </div>
           <div
-            class="py-[15px] px-[25px] text-white hover:text-[#38b083] transition-all duration-200 cursor-pointer"
+            class="py-[15px] px-[25px] hover:text-[#38b083] transition-all duration-200 cursor-pointer"
           >
             Services
           </div>
           <div
-            class="py-[15px] px-[25px] text-white hover:text-[#38b083] transition-all duration-200 cursor-pointer"
+            class="py-[15px] px-[25px] hover:text-[#38b083] transition-all duration-200 cursor-pointer"
           >
             Our Work
           </div>
           <div
-            class="py-[15px] px-[25px] text-white hover:text-[#38b083] transition-all duration-200 cursor-pointer"
+            class="py-[15px] px-[25px] hover:text-[#38b083] transition-all duration-200 cursor-pointer"
           >
             Pricing
           </div>
           <div
-            class="py-[15px] px-[25px] text-white hover:text-[#38b083] transition-all duration-200 cursor-pointer"
+            class="py-[15px] px-[25px] hover:text-[#38b083] transition-all duration-200 cursor-pointer"
           >
             Contact
           </div>
@@ -540,30 +544,26 @@
     <script>
       window.addEventListener("scroll", function () {
         const navbar = document.getElementById("navbar");
-        const navlinks = document.querySelectorAll("a");
-        const navdivs = document.querySelectorAll("div");
+        const navlinks = document.getElementById("a");
+        const navdivs = document.getElementById("div");
         if (window.scrollY > 100) {
           navbar.classList.remove("bg-transparent");
           navbar.classList.add("bg-white");
-          navlinks.forEach((link) => {
-            link.classList.remove("text-white");
-            link.classList.add("text-black");
-          });
-          navdivs.forEach((link) => {
-            link.classList.remove("text-white");
-            link.classList.add("text-black");
-          });
+
+          navlinks.classList.remove("text-white");
+          navlinks.classList.add("text-black");
+
+          navdivs.classList.remove("text-white");
+          navdivs.classList.add("text-black");
         } else {
           navbar.classList.remove("bg-white");
           navbar.classList.add("bg-transparent");
-          navlinks.forEach((link) => {
-            link.classList.remove("text-black");
-            link.classList.add("text-white");
-          });
-          navdivs.forEach((link) => {
-            link.classList.remove("text-black");
-            link.classList.add("text-white");
-          });
+
+          navlinks.classList.remove("text-black");
+          navlinks.classList.add("text-white");
+
+          navdivs.classList.remove("text-black");
+          navdivs.classList.add("text-white");
         }
       });
     </script>
