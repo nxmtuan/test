@@ -16,12 +16,19 @@
         <a
           id="a"
           href="index.html"
-          class="text-white text-[40px] py-[5px] mr-4 no-underline whitespace-nowrap"
+          class="text-white text-[40px] py-[5px] mr-4 no-underline whitespace-nowrap max-sm:ml-5"
           >Tween
         </a>
+
+        <button
+          id="menu-btn"
+          class="md:hidden text-gray-600 focus:outline-none ml-auto mr-5 text-3xl"
+        >
+          &#9776;
+        </button>
         <div
-          id="div"
-          class="flex justify-center items-center text-white ml-10 text-lg"
+          id="menu"
+          class="hidden md:flex justify-center items-center text-white ml-10 text-lg"
         >
           <div
             class="py-[15px] px-[25px] hover:text-[#38b083] transition-all duration-200 cursor-pointer"
@@ -55,20 +62,71 @@
           </div>
         </div>
         <button
-          class="bg-[#38b083] text-white text-base px-6 py-3 ml-auto w-[151.95px] h-[49.6px] rounded-md hover:bg-black transition-all duration-200"
+          class="hidden md:flex bg-[#38b083] text-white text-base px-6 py-3 ml-auto w-[151.95px] h-[49.6px] rounded-md hover:bg-black transition-all duration-200"
         >
           Download
         </button>
       </div>
+
+      <!-- nav mobile -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white shadow-lg absolute top-[70px] left-0 w-full p-5"
+      >
+        <div
+          id="div"
+          class="flex flex-col justify-center items-center text-black ml-10 text-lg"
+        >
+          <div
+            class="py-[15px] px-[25px] hover:text-[#38b083] transition-all duration-200 cursor-pointer"
+          >
+            Home
+          </div>
+          <div
+            class="py-[15px] px-[25px] hover:text-[#38b083] transition-all duration-200 cursor-pointer"
+          >
+            About
+          </div>
+          <div
+            class="py-[15px] px-[25px] hover:text-[#38b083] transition-all duration-200 cursor-pointer"
+          >
+            Services
+          </div>
+          <div
+            class="py-[15px] px-[25px] hover:text-[#38b083] transition-all duration-200 cursor-pointer"
+          >
+            Our Work
+          </div>
+          <div
+            class="py-[15px] px-[25px] hover:text-[#38b083] transition-all duration-200 cursor-pointer"
+          >
+            Pricing
+          </div>
+          <div
+            class="py-[15px] px-[25px] hover:text-[#38b083] transition-all duration-200 cursor-pointer"
+          >
+            Contact
+          </div>
+          <button
+            class="bg-[#38b083] text-white text-base px-6 py-3 w-[151.95px] h-[49.6px] rounded-md hover:bg-black transition-all duration-200"
+          >
+            Download
+          </button>
+        </div>
+      </div>
     </nav>
 
-    <section class="bg-custom bg-cover bg-center h-[75vh] min-h-[600px] w-full">
+    <section
+      class="bg-custom bg-cover bg-center h-[75vh] w-full max-sm:h-[379px]"
+    >
       <div
         class="bg-white/30 flex justify-center items-center w-full h-full pt-[120px] pb-[60px]"
       >
         <div class="container">
-          <div class="w-2/3 px-3">
-            <h1 class="text-white text-[68px] font-semibold mb-12">
+          <div class="w-2/3 px-3 max-sm:w-full">
+            <h1
+              class="text-white text-[68px] font-semibold mb-12 max-sm:text-4xl max-sm:mb-6"
+            >
               We are ready to serve for your digital marketing
             </h1>
             <div
@@ -101,7 +159,7 @@
                 <br />
                 <iframe
                   id="videoFrame"
-                  class="w-[840px] h-[526px]"
+                  class="w-[840px] h-[526px] max-sm:w-[95vw] max-sm:h-[56.25vw] max-sm:max-h-[315px]"
                   src=""
                   frameborder="0"
                   allowfullscreen
@@ -113,31 +171,37 @@
       </div>
     </section>
 
-    <section class="py-[120px] flex justify-center items-center">
+    <section
+      class="py-[120px] flex justify-center items-center max-sm:py-[60px]"
+    >
       <div class="container flex flex-col justify-center items-center">
-        <div class="flex w-full">
-          <h2 class="w-1/2 px-3 text-[42px] mb-12 font-semibold">
+        <div class="flex w-full max-sm:flex-col">
+          <h2
+            class="w-1/2 px-3 text-[42px] mb-12 font-semibold max-sm:w-full max-sm:text-[32px]"
+          >
             Digital Happiness
           </h2>
-          <div class="w-1/2 px-3 flex">
+          <div class="w-1/2 px-3 flex max-sm:w-full">
             <!-- Tab header -->
-            <div class="w-3/4 h-fit border-b ml-auto">
+            <div
+              class="w-3/4 h-fit border-b ml-auto max-sm:w-full max-sm:ml-0 max-sm:mb-12"
+            >
               <div class="w-full flex justify-center items-start ml-auto">
                 <div
                   onclick="openTab(event, 'tab1')"
-                  class="tab-button text-[#dee2e6] select-none cursor-pointer font-semibold py-2 px-4 mx-[23.45px] border-b border-transparent transition-all duration-300"
+                  class="tab-button text-[#dee2e6] select-none cursor-pointer font-semibold py-2 px-4 mx-[23.45px] border-b border-transparent transition-all duration-300 max-sm:mx-[10px]"
                 >
                   Introduction
                 </div>
                 <div
                   onclick="openTab(event, 'tab2')"
-                  class="tab-button text-[#dee2e6] select-none cursor-pointer font-semibold py-2 px-4 mx-[23.45px] border-b border-transparent transition-all duration-300"
+                  class="tab-button text-[#dee2e6] select-none cursor-pointer font-semibold py-2 px-4 mx-[23.45px] border-b border-transparent transition-all duration-300 max-sm:mx-[10px]"
                 >
                   Profile
                 </div>
                 <div
                   onclick="openTab(event, 'tab3')"
-                  class="tab-button text-[#dee2e6] select-none cursor-pointer font-semibold py-2 px-4 mx-[23.45px] border-b border-transparent transition-all duration-300"
+                  class="tab-button text-[#dee2e6] select-none cursor-pointer font-semibold py-2 px-4 mx-[23.45px] border-b border-transparent transition-all duration-300 max-sm:mx-[10px]"
                 >
                   FAQs
                 </div>
@@ -149,26 +213,32 @@
         <!-- tab content -->
         <div
           id="tab1"
-          class="tab-content flex w-full transition-all duration-300"
+          class="tab-content flex w-full transition-all duration-300 max-sm:flex-col"
         >
           <img
             src="https://www.tooplate.com/templates/2128_tween_agency/images/webpage-browser-digital-icon-symbols-concept.jpg"
             alt=""
-            class="w-[656px] h-[456.21px] px-3"
+            class="w-[656px] h-[456.21px] px-3 max-sm:w-full max-sm:h-[241px]"
           />
-          <div class="w-1/2 px-3 my-[53.8px] mx-[55px]">
-            <h3 class="text-4xl mb-4 px-3 font-semibold">Brand Creation</h3>
-            <p class="px-3 break-words text-lg mb-4 text-[#717275]">
+          <div
+            class="w-1/2 px-3 my-[53.8px] mx-[55px] max-sm:w-full max-sm:mx-0 max-sm:my-0 max-sm:mt-5"
+          >
+            <h3
+              class="text-4xl mb-4 px-3 font-semibold max-sm:px-0 max-sm:text-[32px]"
+            >
+              Brand Creation
+            </h3>
+            <p class="px-3 break-words text-lg mb-4 text-[#717275] max-sm:px-0">
               We want you to be happy with our Tween Agency services. Our
               digital agency is ready to serve you to grow your business in a
               healthy way.
             </p>
-            <p class="px-3 break-words text-lg mb-4 text-[#717275]">
+            <p class="px-3 break-words text-lg mb-4 text-[#717275] max-sm:px-0">
               This is Bootstrap 5 HTML template for your website provided by
               Tooplate. You can download, edit and use this layout for your
               company website.
             </p>
-            <p class="px-3 break-words text-lg mb-4 text-[#717275]">
+            <p class="px-3 break-words text-lg mb-4 text-[#717275] max-sm:px-0">
               Image credits go to FreePik and Unsplash for images used in this
               template. We really appreciate these stock image websites for
               providing free photos to everyone.
@@ -180,103 +250,117 @@
           id="tab2"
           class="tab-content hidden w-full transition-all duration-300"
         >
-          <div
-            class="w-1/2 px-3 my-[53.8px] mx-[55px] flex flex-col justify-center"
-          >
-            <h3 class="text-4xl mb-4 px-3 font-semibold">Marie Smarty, CEO</h3>
-            <p class="px-3 break-words text-lg mb-4 text-[#717275]">
-              Our priority is your happiness working together with us. We
-              guarantee you the best service quality from us. Feel free to talk
-              to us via email, twitter, or linkedin.
-            </p>
-            <p
-              class="px-3 break-words text-lg my-4 text-[#717275] font-semibold"
+          <div class="w-full max-sm:flex max-sm:flex-col">
+            <div
+              class="w-1/2 px-3 my-[53.8px] mx-[55px] flex flex-col justify-center max-sm:w-full max-sm:mx-0 max-sm:my-0 max-sm:mb-5"
             >
-              Where to find?
-            </p>
+              <h3
+                class="text-4xl mb-4 px-3 font-semibold max-sm:px-0 max-sm:text-[32px]"
+              >
+                Marie Smarty, CEO
+              </h3>
+              <p
+                class="px-3 break-words text-lg mb-4 text-[#717275] max-sm:px-0"
+              >
+                Our priority is your happiness working together with us. We
+                guarantee you the best service quality from us. Feel free to
+                talk to us via email, twitter, or linkedin.
+              </p>
+              <p
+                class="px-3 break-words text-lg my-4 text-[#717275] font-semibold max-sm:px-0"
+              >
+                Where to find?
+              </p>
+            </div>
+            <img
+              src="https://www.tooplate.com/templates/2128_tween_agency/images/dream-about-working-corporation-became-true.jpg"
+              alt=""
+              class="w-[656px] h-[456.21px] px-3 max-sm:w-full max-sm:h-[241px]"
+            />
           </div>
-          <img
-            src="https://www.tooplate.com/templates/2128_tween_agency/images/dream-about-working-corporation-became-true.jpg"
-            alt=""
-            class="w-[656px] h-[456.21px] px-3"
-          />
         </div>
 
         <div
           id="tab3"
           class="tab-content hidden w-full transition-all duration-300"
         >
-          <img
-            src="https://www.tooplate.com/templates/2128_tween_agency/images/php-programming-html-coding-cyberspace-concept.jpg"
-            alt=""
-            class="w-[656px] h-[456.21px] px-3"
-          />
-          <div
-            class="w-1/2 px-3 my-[53.8px] mx-[55px] flex flex-col justify-center"
-          >
-            <h3 class="text-4xl mb-4 px-3 font-semibold">
-              Frequenlty Asked Questions
-            </h3>
+          <div class="w-full max-sm:flex max-sm:flex-col">
+            <img
+              src="https://www.tooplate.com/templates/2128_tween_agency/images/php-programming-html-coding-cyberspace-concept.jpg"
+              alt=""
+              class="w-[656px] h-[456.21px] px-3 max-sm:w-full max-sm:h-[241px]"
+            />
+            <div
+              class="w-1/2 px-3 my-[53.8px] mx-[55px] flex flex-col justify-center max-sm:w-full max-sm:mx-0 max-sm:my-0 max-sm:mt-5"
+            >
+              <h3
+                class="text-4xl mb-4 px-3 font-semibold max-sm:px-0 max-sm:text-[32px]"
+              >
+                Frequenlty Asked Questions
+              </h3>
 
-            <div class="w-full overflow-hidden">
-              <button
-                class="w-full text-start px-3 break-words text-base mb-4 pt-6 pb-[15px] text-[#717275] border-b"
-                onclick="toggleContent(1)"
-              >
-                What is Tween Agency?
-              </button>
-              <div
-                id="content1"
-                class="px-3 break-words text-lg mb-4 pt-6 pb-[15px] text-[#717275] border-b hidden"
-              >
-                <p>
-                  Tween Agency is free HTML template powered by Bootstrap 5 CSS
-                  framework. This means you can use all standard CSS classes
-                  provided by Bootstrap version 5 to customize your CSS layout.
-                </p>
-                <p>
-                  You are allowed to use it for your clients. You are not
-                  allowed to redistribute this template ZIP file on any other
-                  template website. Please contact Tooplate for more info.
-                </p>
+              <div class="w-full overflow-hidden">
+                <button
+                  class="w-full text-start px-3 break-words text-base mb-4 pt-6 pb-[15px] text-[#717275] border-b max-sm:mb-0"
+                  onclick="toggleContent(1)"
+                >
+                  What is Tween Agency?
+                </button>
+                <div
+                  id="content1"
+                  class="px-3 break-words text-lg mb-4 pt-6 pb-[15px] text-[#717275] border-b hidden"
+                >
+                  <p>
+                    Tween Agency is free HTML template powered by Bootstrap 5
+                    CSS framework. This means you can use all standard CSS
+                    classes provided by Bootstrap version 5 to customize your
+                    CSS layout.
+                  </p>
+                  <p>
+                    You are allowed to use it for your clients. You are not
+                    allowed to redistribute this template ZIP file on any other
+                    template website. Please contact Tooplate for more info.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div class="w-full overflow-hidden">
-              <button
-                class="w-full text-start px-3 break-words text-base mb-4 pt-6 pb-[15px] text-[#717275] border-b"
-                onclick="toggleContent(2)"
-              >
-                What are available services?
-              </button>
-              <div
-                id="content2"
-                class="px-3 break-words text-lg mb-4 pt-6 pb-[15px] text-[#717275] border-b hidden"
-              >
-                <p>
-                  We provide full digital marketing services for all various
-                  aspects of your company's web presence and social medias. You
-                  have 100% peace of mind for your company by working with us.
-                </p>
+              <div class="w-full overflow-hidden">
+                <button
+                  class="w-full text-start px-3 break-words text-base mb-4 pt-6 pb-[15px] text-[#717275] border-b max-sm:mb-0"
+                  onclick="toggleContent(2)"
+                >
+                  What are available services?
+                </button>
+                <div
+                  id="content2"
+                  class="px-3 break-words text-lg mb-4 pt-6 pb-[15px] text-[#717275] border-b hidden"
+                >
+                  <p>
+                    We provide full digital marketing services for all various
+                    aspects of your company's web presence and social medias.
+                    You have 100% peace of mind for your company by working with
+                    us.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div class="w-full overflow-hidden">
-              <button
-                class="w-full text-start px-3 break-words text-base mb-4 pt-6 pb-[15px] text-[#717275] border-b"
-                onclick="toggleContent(3)"
-              >
-                How many successful projects?
-              </button>
-              <div
-                id="content3"
-                class="px-3 break-words text-lg mb-4 pt-6 pb-[15px] text-[#717275] border-b hidden"
-              >
-                <p>
-                  We have over 280+ successful projects for different companies.
-                  There are great experiences of working together with different
-                  clients all over the world.
-                </p>
+              <div class="w-full overflow-hidden">
+                <button
+                  class="w-full text-start px-3 break-words text-base mb-4 pt-6 pb-[15px] text-[#717275] border-b max-sm:mb-0"
+                  onclick="toggleContent(3)"
+                >
+                  How many successful projects?
+                </button>
+                <div
+                  id="content3"
+                  class="px-3 break-words text-lg mb-4 pt-6 pb-[15px] text-[#717275] border-b hidden"
+                >
+                  <p>
+                    We have over 280+ successful projects for different
+                    companies. There are great experiences of working together
+                    with different clients all over the world.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -284,12 +368,16 @@
       </div>
     </section>
 
-    <section class="py-[120px] flex justify-center items-center bg-[#f5f5f5]">
+    <section
+      class="py-[120px] flex justify-center items-center bg-[#f5f5f5] max-sm:py-[60px]"
+    >
       <div class="container">
-        <h2 class="mb-12 px-3 text-[42px] text-center font-semibold">
+        <h2
+          class="mb-12 px-3 text-[42px] text-center font-semibold max-sm:text-[32px]"
+        >
           Digital Services
         </h2>
-        <div class="grid grid-cols-3">
+        <div class="grid grid-cols-3 max-sm:flex max-sm:flex-col">
           <div class="bg-[#0d6efd]">
             <img
               src="https://www.tooplate.com/templates/2128_tween_agency/images/services/undraw_Online_page_re_lhgx.svg"
@@ -362,13 +450,17 @@
       </div>
     </section>
 
-    <section class="py-[120px] flex justify-center items-center">
+    <section
+      class="py-[120px] flex justify-center items-center max-sm:py-[60px]"
+    >
       <div class="container">
-        <h2 class="mb-12 px-3 text-[42px] text-center font-semibold">
+        <h2
+          class="mb-12 px-3 text-[42px] text-center font-semibold max-sm:text-[32px]"
+        >
           Selected Projects
         </h2>
-        <div class="flex">
-          <div class="flex flex-col gap-6 px-3 w-1/3">
+        <div class="flex max-sm:flex-col">
+          <div class="flex flex-col gap-6 px-3 w-1/3 max-sm:w-full max-sm:py-3">
             <div
               class="group bg-img-1 bg-cover flex bg-center w-full h-[415.99px] rounded-md"
             >
@@ -399,7 +491,7 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-6 px-3 w-1/3">
+          <div class="flex flex-col gap-6 px-3 w-1/3 max-sm:w-full max-sm:py-3">
             <div
               class="group bg-img-3 bg-cover flex bg-center w-full h-[273.16px] rounded-md"
             >
@@ -437,7 +529,7 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-6 px-3 w-1/3">
+          <div class="flex flex-col gap-6 px-3 w-1/3 max-sm:w-full max-sm:py-3">
             <div
               class="group bg-img-5 bg-cover flex bg-center w-full h-[519.98px] rounded-md"
             >
@@ -466,22 +558,26 @@
 
     <section class="bg-custom-1 bg-cover bg-center">
       <div
-        class="bg-black/70 py-[120px] w-full h-full flex justify-center items-center"
+        class="bg-black/70 py-[120px] w-full h-full flex justify-center items-center max-sm:py-[60px] max-sm:px-3"
       >
         <div class="container">
           <h2
-            class="text-white text-[42px] font-semibold px-3 mb-12 text-center"
+            class="text-white text-[42px] font-semibold px-3 mb-12 text-center max-sm:text-[32px] max-sm:px-0"
           >
             Tween Marketing Plants
           </h2>
-          <div class="flex">
-            <div class="relative w-1/2 mx-3 bg-white">
+          <div class="flex max-sm:flex-col">
+            <div
+              class="relative w-1/2 mx-3 bg-white max-sm:w-full max-sm:my-3 max-sm:mx-0"
+            >
               <div
                 class="absolute top-0 right-0 text-xs text-white py-3 px-5 w-fit bg-[#38b083]"
               >
                 RECOMMENED PLAN
               </div>
-              <div class="px-10 pt-[60px] pb-10">
+              <div
+                class="px-10 pt-[60px] pb-10 max-sm:pt-[60px] max-sm:pb-5 max-sm:px-[30px]"
+              >
                 <div class="flex border-b pb-[30px]">
                   <div class="text-[32px] font-semibold mb-2">Sufficient</div>
                   <div class="text-[32px] font-semibold mb-2 ml-auto">
@@ -489,7 +585,9 @@
                   </div>
                 </div>
 
-                <div class="flex flex-col mt-[60px] mr-[50px] ml-[95px]">
+                <div
+                  class="flex flex-col mt-[60px] mr-[50px] ml-[95px] max-sm:mx-0 max-sm:mt-5"
+                >
                   <h3 class="text-2xl font-semibold mb-4">Managed Features</h3>
                   <ul class="list-disc mb-4 pl-[15px]">
                     <li class="my-[5px] text-lg text-[#717275]">
@@ -506,7 +604,7 @@
                     </li>
                   </ul>
 
-                  <h3 class="text-2xl font-semibold mt-12 mb-4">
+                  <h3 class="text-2xl font-semibold mt-12 mb-4 max-sm:mt-2">
                     Small to Mid-size Businesses
                   </h3>
                   <p class="text-lg text-[#717275] mb-4">
@@ -516,13 +614,17 @@
               </div>
             </div>
 
-            <div class="relative w-1/2 mx-3 bg-white">
+            <div
+              class="relative w-1/2 mx-3 bg-white max-sm:w-full max-sm:my-3 max-sm:mx-0"
+            >
               <div
                 class="absolute top-0 right-0 text-xs text-white py-3 px-5 w-fit bg-[#38b083]"
               >
                 ECOMMERCE PLAN
               </div>
-              <div class="px-10 pt-[60px] pb-10">
+              <div
+                class="px-10 pt-[60px] pb-10 max-sm:pt-[60px] max-sm:pb-5 max-sm:px-[30px]"
+              >
                 <div class="flex border-b pb-[30px]">
                   <div class="text-[32px] font-semibold mb-2">Complete</div>
                   <div class="text-[32px] font-semibold mb-2 ml-auto">
@@ -530,7 +632,9 @@
                   </div>
                 </div>
 
-                <div class="flex flex-col mt-[60px] mr-[50px] ml-[95px]">
+                <div
+                  class="flex flex-col mt-[60px] mr-[50px] ml-[95px] max-sm:mx-0 max-sm:mt-5"
+                >
                   <h3 class="text-2xl font-semibold mb-4">
                     Fully Featured Work
                   </h3>
@@ -549,7 +653,7 @@
                     </li>
                   </ul>
 
-                  <h3 class="text-2xl font-semibold mt-12 mb-4">
+                  <h3 class="text-2xl font-semibold mt-12 mb-4 max-sm:mt-2">
                     High-end Ecommerce Websites
                   </h3>
                   <p class="text-lg text-[#717275] mb-4">
@@ -563,33 +667,39 @@
       </div>
     </section>
 
-    <section class="py-[120px] flex justify-center items-center">
+    <section
+      class="py-[120px] flex justify-center items-center max-sm:py-[60px]"
+    >
       <div class="container">
-        <div class="mx-[220px] px-3">
-          <h2 class="text-[42px] mb-6 text-center font-semibold">Let's chat</h2>
-          <div class="flex my-2">
-            <div class="px-3 w-1/3">
+        <div class="mx-[220px] px-3 max-sm:mx-0">
+          <h2
+            class="text-[42px] mb-6 text-center font-semibold max-sm:text-[32px]"
+          >
+            Let's chat
+          </h2>
+          <div class="flex my-2 max-sm:flex-col">
+            <div class="px-3 w-1/3 max-sm:w-full">
               <span class="mb-2 text-[#717275] text-base">Full name</span>
               <input
                 type="text"
-                class="w-full px-[13px] py-3 h-[51.6px] border rounded-md"
+                class="w-full px-[13px] py-3 h-[51.6px] border rounded-md max-sm:mb-3"
               />
             </div>
 
-            <div class="px-3 w-1/3">
+            <div class="px-3 w-1/3 max-sm:w-full">
               <span class="mb-2 text-[#717275] text-base">Email Address</span>
               <input
                 type="text"
-                class="w-full px-[13px] py-3 h-[51.6px] border rounded-md"
+                class="w-full px-[13px] py-3 h-[51.6px] border rounded-md max-sm:mb-3"
               />
             </div>
 
-            <div class="px-3 w-1/3">
+            <div class="px-3 w-1/3 max-sm:w-full">
               <span class="mb-2 text-[#717275] text-base"
                 >How did you know about us?</span
               >
               <select
-                class="w-full px-[13px] py-3 pr-9 h-[51.6px] border rounded-md"
+                class="w-full px-[13px] py-3 pr-9 h-[51.6px] border rounded-md max-sm:mb-3"
               >
                 <option value="" selected>Choose a subject</option>
                 <option value="">Website Searches</option>
@@ -618,7 +728,7 @@
 
     <footer class="bg-[#07262E] py-[100px] flex justify-center items-center">
       <div class="container">
-        <div class="flex w-full mb-20">
+        <div class="flex w-full mb-20 max-sm:flex-col">
           <div class="px-3 mr-[110px] mb-6">
             <div class="mb-4">
               <span class="text-white font-semibold text-2xl">Newsletter</span>
@@ -636,7 +746,7 @@
               </button>
             </div>
           </div>
-          <div class="px-3 mx-[110px]">
+          <div class="px-3 mx-[110px] max-sm:mx-0 max-sm:my-5">
             <div class="mb-4">
               <span class="text-white font-semibold text-2xl">Services</span>
             </div>
@@ -663,7 +773,7 @@
               >
             </div>
           </div>
-          <div class="px-3">
+          <div class="px-3 max-sm:my-5">
             <div class="mb-4">
               <span class="text-white font-semibold text-2xl">Say Hi</span>
             </div>
@@ -678,7 +788,9 @@
           </div>
         </div>
         <div class="w-full pt-6 border-t">
-          <div class="flex flex-col w-1/2 px-3 mb-4">
+          <div
+            class="flex flex-col w-1/2 px-3 mb-4 max-sm:w-full max-sm:items-center"
+          >
             <span class="text-white text-base"
               >Copyright © 2022 Tween Agency Co., Ltd.</span
             >
@@ -693,7 +805,7 @@
       window.addEventListener("scroll", function () {
         const navbar = document.getElementById("navbar");
         const navlinks = document.getElementById("a");
-        const navdivs = document.getElementById("div");
+        const navdivs = document.getElementById("menu");
         if (window.scrollY > 100) {
           navbar.classList.remove("bg-transparent");
           navbar.classList.add("bg-white");
@@ -713,6 +825,13 @@
           navdivs.classList.remove("text-black");
           navdivs.classList.add("text-white");
         }
+      });
+
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
       });
 
       //video on hero section
